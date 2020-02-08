@@ -16,12 +16,14 @@ const styles = StyleSheet.create({
         padding: 15,
         backgroundColor: '#f8f8f8',
         borderBottomWidth: 1,
-        borderColor: '#eeeeee'
+        borderColor: '#eeeeee',
+        flex: 1
     },
     listItemView: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        flex: 1,
     },
     listItemText: {
         fontSize: 18
