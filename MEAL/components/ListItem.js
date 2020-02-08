@@ -3,9 +3,11 @@ import { Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 
 const ListItem = ({item}) => {
   return (
-    <TouchableOpacity style={styles.listItem}>
+    <TouchableOpacity style={styles.listItem} onPress={() => alert("pressed!")} >
       <View style={styles.listItemView}>
-          <Text style={styles.listItemText}>{item.text}</Text>
+          <Text style={styles.location}>{item.siteName}</Text>
+          <Text style={styles.address}>{item.siteAddress}</Text>
+          <Text style={styles.hours}>3 miles from your location</Text>
       </View>
     </TouchableOpacity>
   );
@@ -20,13 +22,20 @@ const styles = StyleSheet.create({
         flex: 1
     },
     listItemView: {
-        flexDirection: 'row',
+        flexDirection: 'column',
         justifyContent: 'space-between',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         flex: 1,
     },
-    listItemText: {
+    location: {
         fontSize: 18
+    },
+    address: {
+      fontSize: 10
+    },
+    hours: {
+      fontSize: 10,
+      fontWeight: 'bold'
     }
 
 })
