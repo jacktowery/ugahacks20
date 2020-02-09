@@ -1,2 +1,21 @@
-# ugahacks20
-Entry for UGAHacks 5 (2020).
+## Inspiration
+
+A critical issue facing our society today is access to nutritious foods. As food deserts become more prevalent and the cost of living continues to rise, obtaining healthy meals becomes harder for poorer and less-advantaged students and families. Many families rely on government-subsidized Free and Reduced Lunch programs for their students to be able to eat during the school day, and for some students, this may be their only nutritious meal. When school is not in session, how can these students get healthy food if they cannot afford it? Many families additionally rely on SNAP to greatly reduce the cost of food, but it's difficult to know what stores and retailers accept SNAP, much less local farmers markets. My goal when creating MEAL was to give students and families the tools they need to combat these issues and improve their nutrition.
+
+## What MEAL does
+
+MEAL has two core functionalities: (1) to allow users to search for summer lunch sites and get directions to them, and (2) to allow users to browse the registry of Georgia farmers markets to find local sources of healthy food. 
+
+Functionality (1) is accomplished by letting users search for summer lunch sites by zip code. There are over 3500 sites in Georgia, so narrowing down this list to a specific area is important so that users are not overwhelmed by the list. Users can scroll through and tap on results to learn more about the summer lunch site, including days and times of operation, address & directions, and contact information for the site manager. Tapping the "Directions" button opens the address of the site in Google Maps for navigation.
+
+Functionality (2) is accomplished by letting users browse the registry of farmers markets in Georgia. The list view displays the approximate distance from the user's current location to the market, and if the market accepts SNAP. Users can tap on each site to learn more about its hours and selection of goods & wares and get access to its website and social media profiles. 
+
+## How I built MEAL
+
+I built MEAL as a cross-platform mobile application in React Native. I went into the hackathon this weekend having zero past experience with React or React Native. I wanted to use this event as an opportunity to learn a new skill that is becoming increasingly relevant and important for my future career as a mobile/web developer. I went all the way from my first "Hello World" in React Native to a fully-functioning app with nested navigation stacks and data parsing in less than 36 hours, and I'm proud to have made it as far as I did.
+
+I ran into several challenges when building MEAL. The first was the sheer size of my data source. I used publicly available US government datasets to get information on summer lunch sites and farmers markets, but I did not anticipate the strain on my application when filtering over 30,000 sites to narrow down by distance or zip code. To make the app functional without the time to develop a more efficient search algorithm, I decided to only use data from Georgia, and focus in on the "Local" part of MEAL. The other challenge was just my unfamiliarity with React and React Native. I definitely spent a good chunk of my weekend watching tutorials and researching answers to bugs. Nevertheless, I am proud of the product that I created in this short timeframe and happy to have learned so much about React Native development along the way.
+
+## What's next for MEAL: Making Eating Accessible Locally
+
+If I were to continue development on this project, there are several important next steps I would take. The first would be to implement an efficient search algorithm so that users can be shown lunch site results quicker. Even with the data just reduced to Georgia sites, there are still 3500+ sites (and therefore JSON objects) to parse through. The second would be to take the time to add code snippets to recover more gracefully for incorrect or inconsistent information in the site data and farmers markets data. For example, times, days of the week, and directions are often inconsistently formatted, leading to display errors in the app. Lastly, I would love to incorporate a third functionality for searching basic nutritional information about foods in hopes of furthering MEAL's goal of promoting healthy eating for everyone.
